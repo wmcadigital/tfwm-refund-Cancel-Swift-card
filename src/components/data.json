@@ -1,0 +1,40 @@
+{
+  "refundForm": [
+    {
+      "id": "step-1",
+      "heading": "what is your Swift card?",
+      "currentStepId": "step-swiftcard",
+      "prevStepId": "step-0",
+      "hasReachedConfirmation": false,
+      "options": [
+        "16-18 photocard",
+        "Child photocard",
+        "Multi-day card",
+        "Swift Go",
+        "Swift pay as you go",
+        "Swift photocard"
+      ]
+    },
+    {
+      "id": "step-2",
+      "heading": "Do you have a Direct Debit?",
+      "currentStepId": "Swift photocard",
+      "prevStepId": "step-swiftcard",
+      "hasReachedConfirmation": false,
+      "fields": [
+        {
+          "id": "Direct-Debit-yes",
+          "type": "radio",
+          "text": "Yes",
+          "value": "Yes"
+        },
+        {
+          "id": "Direct-Debit-no",
+          "type": "radio",
+          "text": "No",
+          "value": "No"
+        }
+      ]
+    }
+  ]
+}
