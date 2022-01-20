@@ -7,12 +7,12 @@
       "prevStepId": "step-0",
       "hasReachedConfirmation": false,
       "options": [
-        "16-18 photocard",
-        "Child photocard",
-        "Multi-day card",
-        "Swift Go",
-        "Swift pay as you go",
-        "Swift photocard"
+        { "name": "16-18 photocard" },
+        { "name": "Child photocard" },
+        { "name": "Multi-day card" },
+        { "name": "Swift Go" },
+        { "name": "Swift pay as you go" },
+        { "name": "Swift photocard" }
       ]
     },
     {

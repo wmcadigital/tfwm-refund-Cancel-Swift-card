@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable import/prefer-default-export */
 import React, { createContext, useReducer } from 'react';
-import Data from '../../components/data.json';
+import Data from '../../components/CancelRefundForm/components/data.json';
 // create context
 export const FormDataContext = createContext();
 
@@ -22,7 +22,7 @@ export const FormProvider = (props) => {
   const RefundCancelReducer = (state, action) => {
     switch (action.type) {
       case 'CONTINUE': {
-        const selectedStep = state.steps.pages.find(
+        const selectedStep = state.steps.refundForm.find(
           (item) => item.parentId === action.payload.selectedVal
         );
         const selectedStepFields = selectedStep?.fields?.map((field) => ({
@@ -35,20 +35,20 @@ export const FormProvider = (props) => {
         };
       }
 
-      case 'BACK': {
-        const prevSelectedStep = state.steps.pages.find(
-          (item) => item.currentStepId === action.payload.prevStepId
-        );
-        const updatedFields = prevSelectedStep?.fields?.map((field) => ({
-          ...field,
-          selected: field.id === action.payload.parentId,
-        }));
+      // case 'BACK': {
+      //   const prevSelectedStep = state.steps.pages.find(
+      //     (item) => item.currentStepId === action.payload.prevStepId
+      //   );
+      //   const updatedFields = prevSelectedStep?.fields?.map((field) => ({
+      //     ...field,
+      //     selected: field.id === action.payload.parentId,
+      //   }));
 
-        return {
-          ...state,
-          currentStep: { ...prevSelectedStep, fields: updatedFields },
-        };
-      }
+      //   return {
+      //     ...state,
+      //     currentStep: { ...prevSelectedStep, fields: updatedFields },
+      //   };
+      // }
       default:
         return state;
     }
